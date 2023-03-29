@@ -12,7 +12,7 @@ pipeline{
             steps{
                 script{
                     git credentialsId: 'github',
-                    url: 'https://github.com/anuragjos/NodeJS-App.git',
+                    url: 'https://github.com/anuragjos/nodejs-app.git',
                     branch: 'main'
 
                 }
