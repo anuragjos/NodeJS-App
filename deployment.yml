@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp-deployment
-        image: anuragjoshi01/nodejs-app:16
+        image: anuragjoshi01/nodejs-app:latest
+        imagePullPolicy: Always
         ports:
-        - containerPort: 4000
+        - containerPort: 3000
