@@ -54,5 +54,20 @@ pipeline{
                 }
             }
         }
+        stage("Push to changed Deployment file"){
+            steps{
+                script{
+                    sh """
+                       git config --global user.name "Anil Joshi"
+                       git confit --global user.email "joshianurag088@gmail.com
+                       git add deployment.yml
+                       git commit -m "updating the Deployment file"
+                       """
+                       withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                        sh "git push https://github.com/anuragjos/nodejs-app.git main"
+                       }
+                }
+            }
+        }
    }
 }
