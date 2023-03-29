@@ -59,12 +59,12 @@ pipeline{
                 script{
                     sh """
                        git config --global user.name "anuragjos"
-                       git confit --global user.email "joshianurag088@gmail.com
+                       git confit --global user.email "joshianurag088@gmail.com"
                        git add deployment.yml
                        git commit -m "updating the Deployment file"
                        """
                        withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                        sh "git push https://github.com/anuragjos/nodejs-app.git main"
+                       sh "git push https://github.com/anuragjos/nodejs-app.git main"
                        }
                 }
             }
