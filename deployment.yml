@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: myapp-deployment
-        image: anuragjoshi01/nodejs-app:15
+        image: anuragjoshi01/nodejs-app:16
         ports:
         - containerPort: 4000
