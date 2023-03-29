@@ -25,6 +25,16 @@ pipeline{
                 }
             }
         }
+        stage("Docker Image Push to Docker Hub"){
+            steps{
+                script{
+                    docker_image.push('',REGISTRY_CREDS){
+                    docker_image.push("$BUILD_NUMBER")
+                    docker_image.push ('latest')
+                    }
+                }
+            }
+        }
 
     }
 
